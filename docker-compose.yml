@@ -1,0 +1,20 @@
+version: "3"
+services:
+
+  support-integration:
+    image: support-integration:latest
+    container_name: support-integration
+    build: .
+    volumes:
+      - ./deploy:/deploy:rw
+    expose:
+      - 1099
+      - 8101
+      - 44444
+    ports:
+      - 1099:1099
+      - 8101:8101
+      - 44444:44444
+      - 8080:8080
+    network_mode: bridge
+    restart: unless-stopped
