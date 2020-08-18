@@ -7,6 +7,7 @@ services:
     build: .
     volumes:
       - ./deploy:/deploy:rw
+      - ./config:/config:rw
     expose:
       - 1099
       - 8101

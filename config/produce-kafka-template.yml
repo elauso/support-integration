@@ -1,0 +1,9 @@
+type: produce-kafka
+binder:
+  brokers:
+    - localhost:9092
+output: 
+  destination: test
+  content-type: application/json
+input:
+  endpoint: /produce-kafka

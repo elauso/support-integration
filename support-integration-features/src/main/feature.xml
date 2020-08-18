@@ -6,7 +6,12 @@
         <feature>camel-jetty</feature>
         <feature>camel-jsonpath</feature>
         <feature>camel-mail</feature>
-        <capability> osgi.service;objectClass=org.apache.aries.blueprint.NamespaceHandler;osgi.service.blueprint.namespace=http://camel.apache.org/schema/blueprint;effective:=active; </capability>
+        <bundle>wrap:mvn:com.fasterxml.jackson.core/jackson-databind/${jackson-core.version}</bundle>
+        <bundle>wrap:mvn:com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/${jackson-dataformat.version}</bundle>
+        <bundle>wrap:mvn:commons-io/commons-io/${commons-io.version}</bundle>
+        <capability>
+            osgi.service;objectClass=org.apache.aries.blueprint.NamespaceHandler;osgi.service.blueprint.namespace=http://camel.apache.org/schema/blueprint;effective:=active;
+        </capability>
     </feature>
     <feature name="support-integration-core" version="${project.version}" install="auto">
         <feature version="${project.version}">support-integration-dependencies</feature>

@@ -22,6 +22,8 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>filter</id>
+                        <phase>generate-resources</phase>
                         <goals>
                             <goal>resources</goal>
                         </goals>
