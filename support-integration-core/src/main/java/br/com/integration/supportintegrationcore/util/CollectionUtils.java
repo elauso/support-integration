@@ -4,10 +4,13 @@ import java.util.*;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-public class CollectionUtils {
+public final class CollectionUtils {
+
+    private CollectionUtils() {
+    }
 
     public static <K, V> Dictionary<K, V> convertFromMapToDictiorary(Map<K, V> map) {
-        final Dictionary<K, V> dict = new Hashtable<>();
+        Dictionary<K, V> dict = new Hashtable<>();
         map.forEach(dict::put);
         return dict;
     }
